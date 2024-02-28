@@ -4,269 +4,909 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ecommerce-Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!----- owl.carousel ----->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   </head>
-  <body>
+  <body class="bg-light">
     <!-- Header start -->
-
-     <!--Main Navigation-->
-<header>
-    <!-- Jumbotron -->
-    <div class="p-3 text-center bg-white border-bottom">
-      <div class="container">
-        <div class="row">
-          <!-- Left elements -->
-          <div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
-            <a href="#!" class="ms-md-2">
-              <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="35" />
-            </a>
+    <nav class="navbar navbar-expand-lg navbar-light light_background">
+      <div class="container-fluid">
+        <div class="d-flex">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <form class="d-flex form_search_top">
+            <input class="form-control me-2" type="search" placeholder="Search for products..." aria-label="Search">
+          </form>
+        </div>
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+          <div class="">
+            <ul class="p-0 mt-3 navbar_right">
+              <li>
+                <a href="#" id="cart">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span class="start-100 translate-middle badge rounded-pill bg-danger"> 1 </span>
+                </a>
+              </li>
+            </ul>
           </div>
-          <!-- Left elements -->
-  
-          <!-- Center elements -->
-          <div class="col-md-4">
-            <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
-              <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search" />
-              <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search"></i></span>
-            </form>
-          </div>
-          <!-- Center elements -->
-  
-          <!-- Right elements -->
-          <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
-            <div class="d-flex">
-              <!-- Cart -->
-              <a class="text-reset me-3" href="#">
-                <span><i class="fas fa-shopping-cart"></i></span>
-                <span class="badge rounded-pill badge-notification bg-danger">1</span>
-              </a>
-  
-              <!-- Notification -->
-              <div class="dropdown">
-                <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
-                  role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+          <!-- Notifications -->
+          <div class="">
+            <ul class="p-0 mt-3 navbar_right">
+              <li>
+                <a href="#" id="cart">
                   <i class="fas fa-bell"></i>
+                  <span class="start-100 translate-middle badge rounded-pill bg-danger"> 1 </span>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Some news</a></li>
-                  <li><a class="dropdown-item" href="#">Another news</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </div>
-  
-              <!-- Languages -->
-              <div class="dropdown">
-                <a class="text-reset dropdown-toggle me-3 hidden-arrow" href="#" id="navbarDropdown" role="button"
-                  data-mdb-toggle="dropdown" aria-expanded="false">
-                  <i class="flag flag-united-kingdom m-0"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item" href="#"><i class="flag flag-united-kingdom"></i>English
-                      <i class="fa fa-check text-success ms-2"></i></a>
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"><i class="flag flag-poland"></i>Polski</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"><i class="flag flag-china"></i>中文</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"><i class="flag flag-japan"></i>日本語</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"><i class="flag flag-germany"></i>Deutsch</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"><i class="flag flag-france"></i>Français</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"><i class="flag flag-spain"></i>Español</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"><i class="flag flag-russia"></i>Русский</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"><i class="flag flag-portugal"></i>Português</a>
-                  </li>
-                </ul>
-              </div>
-  
-              <!-- User -->
-              <div class="dropdown">
-                <a class="text-reset dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
-                  id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle" height="22"
-                    alt="" loading="lazy" />
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">My profile</a></li>
-                  <li><a class="dropdown-item" href="#">Settings</a></li>
-                  <li><a class="dropdown-item" href="#">Logout</a></li>
-                </ul>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
-          <!-- Right elements -->
+          <!-- Avatar -->
+          <div class="dropdown">
+            <div class="mx-3">
+              <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25" alt="Black and White Portrait of a Man" loading="lazy" />
+            </div>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+              <li>
+                <a class="dropdown-item" href="#">My profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Settings</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right elements -->
+      </div>
+      </div>
+    </nav>
+    <!-- top-header-end  -->
+    <!-- menu-2 -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse bg_light_color" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 py-2 items_grocery">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <img src="https://rukminim2.flixcart.com/flap/64/64/image/29327f40e9c4d26b.png?q=100">
+                <p>Grocery</p>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div>
+                  <img src="https://rukminim2.flixcart.com/flap/64/64/image/22fddf3c7da4c4f4.png?q=100">
+                </div>
+                <span>Mobiles</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <a class="dropdown-item" href="#">Action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="https://rukminim2.flixcart.com/flap/64/64/image/71050627a56b4693.png?q=100">
+                <p>Travel</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/0d75b34f7d8fbcb3.png?q=100">
+                <p>Fashion</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/0d75b34f7d8fbcb3.png?q=100">
+                <p>Beauty Products</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/0d75b34f7d8fbcb3.png?q=100">
+                <p>Home & Furniture</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="https://rukminim2.flixcart.com/flap/64/64/image/dff3f7adcf3a90c6.png?q=100">
+                <p>Toys</p>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    <!-- Jumbotron -->
-  
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <!-- Container wrapper -->
-      <div class="container justify-content-center justify-content-md-between">
-        <!-- Left links -->
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item me-2 me-lg-0">
-            <a class="nav-link" role="button" data-mdb-toggle="sidenav" data-mdb-target="#sidenav-1"
-              class="btn shadow-0 p-0 me-3" aria-controls="#sidenav-1" aria-haspopup="true">
-              <i class="fas fa-bars me-1"></i>
-              <span>Categories</span>
-            </a>
-          </li>
-          <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
-            <a class="nav-link" href="#">Bestsellers</a>
-          </li>
-          <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
-            <a class="nav-link" href="#">Inspirations</a>
-          </li>
-          <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-          <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-        <!-- Left links -->
-  
-        <button class="btn btn-outline-primary" data-mdb-ripple-color="dark" type="button">
-          Download app<i class="fas fa-download ms-2"></i>
-        </button>
-      </div>
-      <!-- Container wrapper -->
     </nav>
-    <!-- Navbar -->
-  
-    <!-- Sidenav -->
-    <div id="sidenav-1" class="sidenav" role="navigation" data-mdb-hidden="true" data-mdb-accordion="true">
-      <ul class="sidenav-menu">
-        <li class="sidenav-item">
-          <a class="sidenav-link"><i class="fas fa-layer-group pe-3"></i><span>Categories</span></a>
-          <ul class="sidenav-collapse show">
-            <li class="sidenav-item">
-              <a class="sidenav-link">Dresses</a>
-            </li>
-            <li class="sidenav-item">
-              <a class="sidenav-link">Shirts</a>
-            </li>
-            <li class="sidenav-item">
-              <a class="sidenav-link">Jeans</a>
-            </li>
-            <li class="sidenav-item">
-              <a class="sidenav-link">Shoes</a>
-            </li>
-            <li class="sidenav-item">
-              <a class="sidenav-link">Accessories</a>
-            </li>
-            <li class="sidenav-item">
-              <a class="sidenav-link">Jewelry</a>
-            </li>
-          </ul>
-        </li>
-        <li class="sidenav-item">
-          <a class="sidenav-link"><i class="fas fa-gem pe-3"></i><span>Brands</span></a>
-          <ul class="sidenav-collapse">
-            <li class="sidenav-item">
-              <a class="sidenav-link">Brand 1</a>
-            </li>
-            <li class="sidenav-item">
-              <a class="sidenav-link">Brand 2</a>
-            </li>
-            <li class="sidenav-item">
-              <a class="sidenav-link">Brand 3</a>
-            </li>
-            <li class="sidenav-item">
-              <a class="sidenav-link">Brand 4</a>
-            </li>
-          </ul>
-        </li>
-        <li class="sidenav-item">
-          <a class="sidenav-link"><i class="fas fa-gift pe-3"></i><span>Discounts</span></a>
-          <ul class="sidenav-collapse">
-            <li class="sidenav-item">
-              <a class="sidenav-link">-70%</a>
-            </li>
-            <li class="sidenav-item">
-              <a class="sidenav-link">-50%</a>
-            </li>
-            <li class="sidenav-item">
-              <a class="sidenav-link">Any</a>
-            </li>
-          </ul>
-        </li>
-        <li class="sidenav-item">
-          <a class="sidenav-link"><i class="fas fa-fire-alt pe-3"></i><span>Popular</span></a>
-          <ul class="sidenav-collapse">
-            <li class="sidenav-item">
-              <a class="sidenav-link">Jewelry</a>
-            </li>
-            <li class="sidenav-item">
-              <a class="sidenav-link">Snickers</a>
-            </li>
-          </ul>
-        </li>
-        <li class="sidenav-item">
-          <a class="sidenav-link"><i class="fab fa-hotjar pe-3"></i><span>Today's bestseller</span></a>
-          <div class="card mx-3">
-            <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).jpg"
-                class="w-100" />
-              <a href="#!">
-                <div class="mask">
-                  <div class="d-flex justify-content-start align-items-end h-100">
-                    <h5><span class="badge bg-danger ms-2">-10%</span></h5>
+    <!----------- Header end ------------>
+    <!----------- Banner start ------------>
+    <section class="mt-3 main_banner">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/352e6f0f8034fab5.jpg?q=20" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/aa1b2bdcf519b468.jpg?q=20" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/352e6f0f8034fab5.jpg?q=20" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------- 1st section ------------>
+    <section class="my-5 section_2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="row align-items-center pro_background">
+            <div class="heading_main">
+              <h2>Best of Electronics</h2>
+            </div>
+            <div class="col-10 col-carousel">
+              <div class="owl-carousel carousel-main">
+                <div class="border main_boder_pro">
+                  <div class="img_product">
+                    <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1">
+                  </div>
+                  <div class="my-3 text-center products_content">
+                    <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                    <div class="product-price">
+                      <span class="text-primary">$28. <small>50</small>
+                      </span>
+                      <del class="fs-sm text-muted">$38. <small>50</small>
+                      </del>
+                    </div>
+                    <div class="product-action">
+                      <a href="#" class="btn">
+                        <i class="fa fa-heart"></i>
+                      </a>
+                      <a href="#" class="btn">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
-                <div class="hover-overlay">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                <div class="border main_boder_pro">
+                  <div class="img_product">
+                    <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1">
+                  </div>
+                  <div class="my-3 text-center products_content">
+                    <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                    <div class="product-price">
+                      <span class="text-primary">$28. <small>50</small>
+                      </span>
+                      <del class="fs-sm text-muted">$38. <small>50</small>
+                      </del>
+                    </div>
+                    <div class="product-action">
+                      <a href="#" class="btn">
+                        <i class="fa fa-heart"></i>
+                      </a>
+                      <a href="#" class="btn">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </a>
+                <div class="border main_boder_pro">
+                  <div class="img_product">
+                    <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1">
+                  </div>
+                  <div class="my-3 text-center products_content">
+                    <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                    <div class="product-price">
+                      <span class="text-primary">$28. <small>50</small>
+                      </span>
+                      <del class="fs-sm text-muted">$38. <small>50</small>
+                      </del>
+                    </div>
+                    <div class="product-action">
+                      <a href="#" class="btn">
+                        <i class="fa fa-heart"></i>
+                      </a>
+                      <a href="#" class="btn">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="border main_boder_pro">
+                  <div class="img_product">
+                    <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1">
+                  </div>
+                  <div class="my-3 text-center products_content">
+                    <h2 class="product-title">Full Rim Aviator Eyeglasses </h2>
+                    <div class="product-price">
+                      <span class="text-primary">$28. <small>50</small>
+                      </span>
+                      <del class="fs-sm text-muted">$38. <small>50</small>
+                      </del>
+                    </div>
+                    <div class="product-action">
+                      <a href="#" class="btn">
+                        <i class="fa fa-heart"></i>
+                      </a>
+                      <a href="#" class="btn">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="border main_boder_pro">
+                  <div class="img_product">
+                    <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1">
+                  </div>
+                  <div class="my-3 text-center products_content">
+                    <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                    <div class="product-price">
+                      <span class="text-primary">$28. <small>50</small>
+                      </span>
+                      <del class="fs-sm text-muted">$38. <small>50</small>
+                      </del>
+                    </div>
+                    <div class="product-action">
+                      <a href="#" class="btn">
+                        <i class="fa fa-heart"></i>
+                      </a>
+                      <a href="#" class="btn">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="card-body">
-              <a href="" class="text-reset">
-                <p class="mb-2">Pink snickers</p>
-              </a>
-              <p class="mb-0">
-                <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
-              </p>
+            <div class="col-2">
+              <div class="img_add">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/530/810/image/fc822dc700322fcd.jpg?q=20" width="100%">
+              </div>
             </div>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
+    </section>
+    <!-- ----- 2nd section start---------- -->
+    <!-- ==================================== -->
+
+    <section class="my-5 section_2">
+      <div class="container-fluid">
+
+          <div class="row align-items-center pro_background">
+            <div class="heading_main">
+              <h2>Beauty, Food, Toys & more</h2>
+            </div>
+            <div class="col-12 col-carousel">
+              <div class="owl-carousel carousel-main">
+                <div class="border main_boder_pro">
+                  <div class="img_product">
+                    <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1">
+                  </div>
+                  <div class="my-3 text-center products_content">
+                    <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                    <div class="product-price">
+                      <span class="text-primary">$28. <small>50</small>
+                      </span>
+                      <del class="fs-sm text-muted">$38. <small>50</small>
+                      </del>
+                    </div>
+                    <div class="product-action">
+                      <a href="#" class="btn">
+                        <i class="fa fa-heart"></i>
+                      </a>
+                      <a href="#" class="btn">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="border main_boder_pro">
+                  <div class="img_product">
+                    <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1">
+                  </div>
+                  <div class="my-3 text-center products_content">
+                    <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                    <div class="product-price">
+                      <span class="text-primary">$28. <small>50</small>
+                      </span>
+                      <del class="fs-sm text-muted">$38. <small>50</small>
+                      </del>
+                    </div>
+                    <div class="product-action">
+                      <a href="#" class="btn">
+                        <i class="fa fa-heart"></i>
+                      </a>
+                      <a href="#" class="btn">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="border main_boder_pro">
+                  <div class="img_product">
+                    <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1">
+                  </div>
+                  <div class="my-3 text-center products_content">
+                    <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                    <div class="product-price">
+                      <span class="text-primary">$28. <small>50</small>
+                      </span>
+                      <del class="fs-sm text-muted">$38. <small>50</small>
+                      </del>
+                    </div>
+                    <div class="product-action">
+                      <a href="#" class="btn">
+                        <i class="fa fa-heart"></i>
+                      </a>
+                      <a href="#" class="btn">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="border main_boder_pro">
+                  <div class="img_product">
+                    <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1">
+                  </div>
+                  <div class="my-3 text-center products_content">
+                    <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                    <div class="product-price">
+                      <span class="text-primary">$28. <small>50</small>
+                      </span>
+                      <del class="fs-sm text-muted">$38. <small>50</small>
+                      </del>
+                    </div>
+                    <div class="product-action">
+                      <a href="#" class="btn">
+                        <i class="fa fa-heart"></i>
+                      </a>
+                      <a href="#" class="btn">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="border main_boder_pro">
+                  <div class="img_product">
+                    <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1">
+                  </div>
+                  <div class="my-3 text-center products_content">
+                    <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                    <div class="product-price">
+                      <span class="text-primary">$28. <small>50</small>
+                      </span>
+                      <del class="fs-sm text-muted">$38. <small>50</small>
+                      </del>
+                    </div>
+                    <div class="product-action">
+                      <a href="#" class="btn">
+                        <i class="fa fa-heart"></i>
+                      </a>
+                      <a href="#" class="btn">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </section>
+ <!-- ------- 3rd section start --------- -->
+<!-- ==================================== -->
+
+ <section class="my-5 section_3">
+    <div class="container-fluid">
+      <div class="row">
+
+            <div class="col-4">
+                <div class="pro_background">
+                <div class="px-2 heading_main">
+                    <h2>Most Loved Gifts</h2>
+                </div>
+                <div class="row">
+               <div class="col-md-6">
+                <div class="border main_boder_pro">
+                    <div class="img_product">
+                      <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                    </div>
+                    <div class="my-2 text-center products_content">
+                      <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                      <div class="product-price">
+                        <span class="text-primary">$28. <small>50</small>
+                        </span>
+                        <del class="fs-sm text-muted">$38. <small>50</small>
+                        </del>
+                      </div>
+                      <div class="product-action">
+                        <a href="#" class="btn">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                        <a href="#" class="btn">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+               
+                  <div class="mt-2 border main_boder_pro">
+                    <div class="img_product">
+                      <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                    </div>
+                    <div class="my-2 text-center products_content">
+                      <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                      <div class="product-price">
+                        <span class="text-primary">$28. <small>50</small>
+                        </span>
+                        <del class="fs-sm text-muted">$38. <small>50</small>
+                        </del>
+                      </div>
+                      <div class="product-action">
+                        <a href="#" class="btn">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                        <a href="#" class="btn">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="border main_boder_pro">
+                        <div class="img_product">
+                          <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                        </div>
+                        <div class="my-2 text-center products_content">
+                          <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                          <div class="product-price">
+                            <span class="text-primary">$28. <small>50</small>
+                            </span>
+                            <del class="fs-sm text-muted">$38. <small>50</small>
+                            </del>
+                          </div>
+                          <div class="product-action">
+                            <a href="#" class="btn">
+                              <i class="fa fa-heart"></i>
+                            </a>
+                            <a href="#" class="btn">
+                              <i class="fa fa-shopping-cart"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mt-2 border main_boder_pro">
+                        <div class="img_product">
+                          <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                        </div>
+                        <div class="my-2 text-center products_content">
+                          <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                          <div class="product-price">
+                            <span class="text-primary">$28. <small>50</small>
+                            </span>
+                            <del class="fs-sm text-muted">$38. <small>50</small>
+                            </del>
+                          </div>
+                          <div class="product-action">
+                            <a href="#" class="btn">
+                              <i class="fa fa-heart"></i>
+                            </a>
+                            <a href="#" class="btn">
+                              <i class="fa fa-shopping-cart"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                   
+                    </div>
+                </div>
+            </div>
+            <!-- div-3 end  -->
+            </div>
+
+            <div class="col-8">
+                
+            <div class="most_loved_img">
+                <img src="https://rukminim2.flixcart.com/www/1070/770/promos/26/09/2023/ed27f892-1bc6-462f-805b-953f5add4f6a.jpg?q=90" width="100%">
+            </div>
+          </div>
+        
+
+
+      </div>
     </div>
-    <!-- Sidenav -->
-  
-   
-  </header>
-  <!--Main Navigation-->
+ </section>
+<!-- ----- 4nd section start---------- -->
+<!-- ==================================== -->
 
+<section class="section_4">
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-4">
+                <div class="pro_background">
+                    <div class="px-2 heading_main">
+                        <h2>Season’s Top Picks</h2>
+                    </div>
+                    <div class="row">
+                   <div class="col-md-6">
+                    <div class="border main_boder_pro">
+                        <div class="img_product">
+                          <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                        </div>
+                        <div class="my-2 text-center products_content">
+                          <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                          <div class="product-price">
+                            <span class="text-primary">$28. <small>50</small>
+                            </span>
+                            <del class="fs-sm text-muted">$38. <small>50</small>
+                            </del>
+                          </div>
+                          <div class="product-action">
+                            <a href="#" class="btn">
+                              <i class="fa fa-heart"></i>
+                            </a>
+                            <a href="#" class="btn">
+                              <i class="fa fa-shopping-cart"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                   
+                      <div class="mt-2 border main_boder_pro">
+                        <div class="img_product">
+                          <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                        </div>
+                        <div class="my-2 text-center products_content">
+                          <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                          <div class="product-price">
+                            <span class="text-primary">$28. <small>50</small>
+                            </span>
+                            <del class="fs-sm text-muted">$38. <small>50</small>
+                            </del>
+                          </div>
+                          <div class="product-action">
+                            <a href="#" class="btn">
+                              <i class="fa fa-heart"></i>
+                            </a>
+                            <a href="#" class="btn">
+                              <i class="fa fa-shopping-cart"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+    
+                    </div>
+    
+                    <div class="col-md-6">
+                        <div class="border main_boder_pro">
+                            <div class="img_product">
+                              <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                            </div>
+                            <div class="my-2 text-center products_content">
+                              <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                              <div class="product-price">
+                                <span class="text-primary">$28. <small>50</small>
+                                </span>
+                                <del class="fs-sm text-muted">$38. <small>50</small>
+                                </del>
+                              </div>
+                              <div class="product-action">
+                                <a href="#" class="btn">
+                                  <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="#" class="btn">
+                                  <i class="fa fa-shopping-cart"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+    
+                          <div class="mt-2 border main_boder_pro">
+                            <div class="img_product">
+                              <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                            </div>
+                            <div class="my-2 text-center products_content">
+                              <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                              <div class="product-price">
+                                <span class="text-primary">$28. <small>50</small>
+                                </span>
+                                <del class="fs-sm text-muted">$38. <small>50</small>
+                                </del>
+                              </div>
+                              <div class="product-action">
+                                <a href="#" class="btn">
+                                  <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="#" class="btn">
+                                  <i class="fa fa-shopping-cart"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-4">
+                <div class="pro_background">
+                    <div class="px-2 heading_main">
+                        <h2>Hand-picked Home Decor</h2>
+                    </div>
+                    <div class="row">
+                   <div class="col-md-6">
+                    <div class="border main_boder_pro">
+                        <div class="img_product">
+                          <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                        </div>
+                        <div class="my-2 text-center products_content">
+                          <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                          <div class="product-price">
+                            <span class="text-primary">$28. <small>50</small>
+                            </span>
+                            <del class="fs-sm text-muted">$38. <small>50</small>
+                            </del>
+                          </div>
+                          <div class="product-action">
+                            <a href="#" class="btn">
+                              <i class="fa fa-heart"></i>
+                            </a>
+                            <a href="#" class="btn">
+                              <i class="fa fa-shopping-cart"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                   
+                      <div class="mt-2 border main_boder_pro">
+                        <div class="img_product">
+                          <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                        </div>
+                        <div class="my-2 text-center products_content">
+                          <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                          <div class="product-price">
+                            <span class="text-primary">$28. <small>50</small>
+                            </span>
+                            <del class="fs-sm text-muted">$38. <small>50</small>
+                            </del>
+                          </div>
+                          <div class="product-action">
+                            <a href="#" class="btn">
+                              <i class="fa fa-heart"></i>
+                            </a>
+                            <a href="#" class="btn">
+                              <i class="fa fa-shopping-cart"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+    
+                    </div>
+    
+                    <div class="col-md-6">
+                        <div class="border main_boder_pro">
+                            <div class="img_product">
+                              <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                            </div>
+                            <div class="my-2 text-center products_content">
+                              <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                              <div class="product-price">
+                                <span class="text-primary">$28. <small>50</small>
+                                </span>
+                                <del class="fs-sm text-muted">$38. <small>50</small>
+                                </del>
+                              </div>
+                              <div class="product-action">
+                                <a href="#" class="btn">
+                                  <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="#" class="btn">
+                                  <i class="fa fa-shopping-cart"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+    
+                          <div class="mt-2 border main_boder_pro">
+                            <div class="img_product">
+                              <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                            </div>
+                            <div class="my-2 text-center products_content">
+                              <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                              <div class="product-price">
+                                <span class="text-primary">$28. <small>50</small>
+                                </span>
+                                <del class="fs-sm text-muted">$38. <small>50</small>
+                                </del>
+                              </div>
+                              <div class="product-action">
+                                <a href="#" class="btn">
+                                  <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="#" class="btn">
+                                  <i class="fa fa-shopping-cart"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                       
+                        </div>
+                    </div>
+                </div>
+              </div>
 
+              <div class="col-4">
+                <div class="pro_background">
+                    <div class="px-2 heading_main">
+                        <h2>Travel Essentials For You</h2>
+                    </div>
+                    <div class="row">
+                   <div class="col-md-6">
+                    <div class="border main_boder_pro">
+                        <div class="img_product">
+                          <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                        </div>
+                        <div class="my-2 text-center products_content">
+                          <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                          <div class="product-price">
+                            <span class="text-primary">$28. <small>50</small>
+                            </span>
+                            <del class="fs-sm text-muted">$38. <small>50</small>
+                            </del>
+                          </div>
+                          <div class="product-action">
+                            <a href="#" class="btn">
+                              <i class="fa fa-heart"></i>
+                            </a>
+                            <a href="#" class="btn">
+                              <i class="fa fa-shopping-cart"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                   
+                      <div class="mt-2 border main_boder_pro">
+                        <div class="img_product">
+                          <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                        </div>
+                        <div class="my-2 text-center products_content">
+                          <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                          <div class="product-price">
+                            <span class="text-primary">$28. <small>50</small>
+                            </span>
+                            <del class="fs-sm text-muted">$38. <small>50</small>
+                            </del>
+                          </div>
+                          <div class="product-action">
+                            <a href="#" class="btn">
+                              <i class="fa fa-heart"></i>
+                            </a>
+                            <a href="#" class="btn">
+                              <i class="fa fa-shopping-cart"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+    
+                    </div>
+    
+                    <div class="col-md-6">
+                        <div class="border main_boder_pro">
+                            <div class="img_product">
+                              <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                            </div>
+                            <div class="my-2 text-center products_content">
+                              <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                              <div class="product-price">
+                                <span class="text-primary">$28. <small>50</small>
+                                </span>
+                                <del class="fs-sm text-muted">$38. <small>50</small>
+                                </del>
+                              </div>
+                              <div class="product-action">
+                                <a href="#" class="btn">
+                                  <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="#" class="btn">
+                                  <i class="fa fa-shopping-cart"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+    
+                          <div class="mt-2 border main_boder_pro">
+                            <div class="img_product">
+                              <img src="http://via.placeholder.com/350x200/FECA57/FFF.jpg?text=1" width="100%">
+                            </div>
+                            <div class="my-2 text-center products_content">
+                              <h2 class="product-title">Full Rim Aviator Eyeglasses</h2>
+                              <div class="product-price">
+                                <span class="text-primary">$28. <small>50</small>
+                                </span>
+                                <del class="fs-sm text-muted">$38. <small>50</small>
+                                </del>
+                              </div>
+                              <div class="product-action">
+                                <a href="#" class="btn">
+                                  <i class="fa fa-heart"></i>
+                                </a>
+                                <a href="#" class="btn">
+                                  <i class="fa fa-shopping-cart"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                       
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Header end -->
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!------------ script ------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(function() {
+        // Owl Carousel
+        var owl = $(".owl-carousel");
+        owl.owlCarousel({
+          items: 3,
+          margin: 10,
+          loop: true,
+          nav: true,
+          autoplay: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 3
+            },
+            1000: {
+              items: 5
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>

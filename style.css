@@ -1,0 +1,36 @@
+.light_background {
+    background: #fff;
+    padding: 10px 55px;
+}
+ul.navbar_right li {
+    list-style: none;
+}
+::placeholder {
+    font-size: 16px;
+}
+.bg_light_color {
+    font-size: 18px;
+    font-weight: 600;
+    background: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.items_grocery li {
+    padding: 0px 40px;
+    text-align: center;
+}
+.pro_background {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+h2.product-title {
+    font-size: 17px;
+}
+.most_loved_img img {
+    height: 585px;
+    object-fit: cover;
+}
+.heading_main h2 {
+    font-size: 23px;
+    margin: 0px 0 20px;
+}
