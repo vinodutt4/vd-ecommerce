@@ -9,9 +9,7 @@ ul.navbar_right li {
     font-size: 16px;
 }
 .bg_light_color {
-    font-size: 18px;
-    font-weight: 600;
-    background: #fff;
+    font-size: 18px; font-weight: 600; background: #fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .items_grocery li {
@@ -34,3 +32,71 @@ h2.product-title {
     font-size: 23px;
     margin: 0px 0 20px;
 }
+/* ---- main css slider---- */
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+    display: block !important;
+}
+.owl-nav.disabled {
+    text-align: center;
+    margin-top: 15px;
+}
+button.owl-prev i {
+    width: 25px; height: 25px; line-height: 26px; border: 1px solid #0000007a;
+}
+button.owl-next i {
+    border: 1px solid #0000007a;
+    width: 25px; height: 25px; margin-left: 10px; line-height: 26px;
+}
+.btn_icon {
+    background: #2A55E5; display: inline-block;
+    width: 25px; height: 25px; text-align: center; border-radius: 100%;
+    line-height: 26px;
+}
+.btn_icon a i {
+    color: #fff;
+}
+.footer_heading h5 {
+    font-size: 17px !important;
+}
+.list_footer li a {
+    color: #fff; text-decoration: none;
+}
+.list_footer li {
+    padding: 6px 0;
+}
+.img_payment {
+    text-align: right;
+}
+.border_contents li {
+    padding: 0;
+}
+.dropdown .dropdown-menu {
+    display: none;
+  }
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+}
+.border_contents li a {
+    border-bottom: 1px solid #99999961;
+    text-align: left;
+    padding: 10px 10px;
+}
+.cart_iconss {
+    font-size: 21px;
+}
+
+
+@media screen and (min-width: 769px) {
+    .dropend:hover > .dropdown-menu {
+      position: absolute;
+       top: 0;
+      left: 100%;
+    }
+    .dropend .dropdown-toggle {
+      margin-left: 0.5em;
+    }
+  }
+  
